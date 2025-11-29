@@ -56,11 +56,11 @@ O banco é composto pelas seguintes tabelas:
 
 ### 4. Configuração de conexão
 
-Para configurar a conexão com o banco de dados, vá até o arquivo [application.properties](./src/main/resources/application.properties) e substitua os campos com os seus dados reais.
+Para configurar a conexão com o banco de dados, vá até o arquivo [application.properties](api/src/main/resources/resources/application.properties) e substitua os campos com os seus dados reais.
 
 ### 5. Execução
 
-- Com o projeto aberto na IDE, abra o terminal e execute o comando ```./mvnw spring-boot:run``` ou se preferir, na sua IDE, vá para o arquivo [GerenciamentoEstoqueApplication.java](./src/main/java/com/tsi/gerenciamento_estoque/GerenciamentoEstoqueApplication.java) e clique no botão de "Run".
+- Com o projeto aberto na IDE, abra o terminal e execute o comando ```./mvnw spring-boot:run``` ou se preferir, na sua IDE, vá para o arquivo [GerenciamentoEstoqueApplication.java](api/src/main/java/com/tsi/gerenciamento_estoque/GerenciamentoEstoqueApplication.java) e clique no botão de "Run".
 - No seu navegador, coloque a seguinte URL: ```http://localhost:8080/swagger-ui/index.html```.
 
 ## Breve explicação do que é usado

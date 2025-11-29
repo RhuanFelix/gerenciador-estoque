@@ -3,9 +3,12 @@ package com.tsi.gerenciamento_estoque.jobs;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
+import org.springframework.boot.loader.net.protocol.Handlers;
 
 public class ProdutoCDCJob {
     public static void main(String[] argumentos) throws Exception {
+
+        Handlers.register();
         // Ambiente de execução
         StreamExecutionEnvironment ambienteDeExecucao = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment ambienteDeTabela = StreamTableEnvironment.create(ambienteDeExecucao);
@@ -24,10 +27,10 @@ public class ProdutoCDCJob {
                         " 'hostname' = 'localhost'," +
                         " 'port' = '5432'," +
                         " 'username' = 'postgres'," +
-                        " 'password' = 'sua_senha'," +
-                        " 'database-name' = 'estoque_db'," +
+                        " 'password' = '12345'," +
+                        " 'database-name' = 'gerenciador_estoque'," +
                         " 'schema-name' = 'public'," +
-                        " 'table-name' = 'produto'" +
+                        " 'table-name' = 'Produto'" +
                         ")"
         );
 
@@ -39,10 +42,10 @@ public class ProdutoCDCJob {
                         " PRIMARY KEY (categoria) NOT ENFORCED" +
                         ") WITH (" +
                         " 'connector' = 'jdbc'," +
-                        " 'url' = 'jdbc:postgresql://localhost:5432/estoque_db'," +
+                        " 'url' = 'jdbc:postgresql://localhost:5432/gerenciador_estoque'," +
                         " 'table-name' = 'metricas_categoria'," +
                         " 'username' = 'postgres'," +
-                        " 'password' = 'sua_senha'," +
+                        " 'password' = '12345'," +
                         " 'driver' = 'org.postgresql.Driver'" +
                         ")"
         );
