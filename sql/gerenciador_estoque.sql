@@ -14,4 +14,9 @@ CREATE TABLE Produto (
  preco DECIMAL NOT NULL,  
  id_categoria INT NOT NULL,
  FOREIGN KEY (id_categoria) REFERENCES Categoria(id)
-); 
+);
+
+CREATE TABLE metricas_categoria (
+    categoria VARCHAR(255) PRIMARY KEY,
+    valor_total DECIMAL
+);

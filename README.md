@@ -34,6 +34,7 @@ O projeto segue a arquitetura em camadas:
 O banco é composto pelas seguintes tabelas:
 
 - Categoria;
+- metricas_categorias;
 - Produto.
 
 ## Como executar o projeto
@@ -62,6 +63,10 @@ Para configurar a conexão com o banco de dados, vá até o arquivo [application
 
 - Com o projeto aberto na IDE, abra o terminal e execute o comando ```./mvnw spring-boot:run``` ou se preferir, na sua IDE, vá para o arquivo [GerenciamentoEstoqueApplication.java](./src/main/java/com/tsi/gerenciamento_estoque/GerenciamentoEstoqueApplication.java) e clique no botão de "Run".
 - No seu navegador, coloque a seguinte URL: ```http://localhost:8080/swagger-ui/index.html```.
+
+## Projeto gerenciador-estoque-flink
+
+Para acessar o projeto do flink, acesse o link: [gerenciador-estoque-flink](https://github.com/RhuanFelix/gerenciador-estoque-flink.git)
 
 ## Breve explicação do que é usado
 
